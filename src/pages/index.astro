@@ -1,17 +1,27 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
+// Conozco dos formas de insertar imagenes locales
+
+// 1. (Esta) Importar como objeto desde la ruta dentro de src/
+//     importa bocchi de src/images/bocchi-1.jpeg
+// 2. Meter el archivo desde la carpeta public, esta caperta se encuentra
+//    al nivel del nombre del proyecto, al igual que la carpeta src
+//    para usar la imagen solo la referenciamos al mismo nivel
+//    <img src="/bocchi-1.jpeg"
+import bocchi from '../images/bocchi-1.jpeg';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<p>Astro es bonito</p>
-	</body>
-</html>
+<Layout pageTitle='inicio' pageDescription='Página inicio'>
+	<h1>Inicio</h1>
+	<p>Bienvenido a mi página web</p>
+	<p>Texto de ejemplo!</p>
+
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima explicabo
+		aperiam dolore expedita quibusdam similique aliquam illo excepturi neque,
+		animi nam nobis voluptatum accusamus ipsum velit, culpa aspernatur
+		cupiditate iste.
+	</p>
+	<img src={bocchi} alt='Imagen de bocchi' />
+</Layout>

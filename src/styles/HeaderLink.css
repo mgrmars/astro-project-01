@@ -1,0 +1,11 @@
+.link {
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.link.active {
+	font-weight: 600;
+}
