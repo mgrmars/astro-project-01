@@ -1,0 +1,78 @@
+---
+import HeaderLink from './HeaderLink.astro';
+
+import menuIcon from '../../images/menu.svg';
+---
+
+<style lang='scss'>
+  $foreground: hsl(0, 0%, 80%);
+  $foregroundHover: hsl(0, 0%, 100%);
+  $background: hsl(0, 0%, 20%);
+
+  header {
+    background-color: $background;
+    padding: 1.4rem 1.6rem;
+    width: 100%;
+
+    .logo {
+      font-weight: 800;
+      color: $foreground;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    .menu-button {
+      color: $foreground;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      nav {
+        ul {
+          list-style: none;
+          display: flex;
+
+          li {
+            a {
+              text-decoration: none;
+              transition: color 200ms ease-in-out;
+
+              &.active {
+                font-weight: 600;
+              }
+
+              &:hover {
+                color: hsl(0, 0%, 100%);
+              }
+            }
+            a {
+              color: $foreground;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+<header>
+  <div>
+    <a class='logo' href='/'>Adrian</a>
+    <span class="material-symbols-outlined menu-button">menu</span>
+    <nav>
+      <ul>
+        <li>
+          <HeaderLink class='link' href={'/'}>Inicio</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink class='link' href={'/acercade'}>Acerca de</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink class='link' href={'/blog'}>Blog</HeaderLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
