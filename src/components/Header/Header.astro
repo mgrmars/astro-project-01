@@ -1,54 +1,64 @@
 ---
-// Components
 import HeaderLink from './HeaderLink.astro';
 ---
-<!-- Sass  -->
+
+<!-- Style -->
 <style lang='scss'>
-  $foreground: hsl(0, 0%, 80%);
-  $foregroundHover: hsl(0, 0%, 100%);
-  $background: hsl(0, 0%, 20%);
+  $background-color: hsl(0, 0%, 15%);
+  $foreground-primary: hsl(0, 0%, 95%);
+  $foreground-secondary: hsl(0, 0%, 85%);
+  $foreground-terciary: hsl(0, 0%, 80%);
 
-  header {
-    background-color: $background;
-    padding: 1.4rem 1.6rem;
+  $padding: 1.2rem 1.6rem;
+  .container {
+    z-index: 2;
+    position: fixed;
     width: 100%;
-
-    .logo {
-      font-weight: 800;
-      color: $foreground;
-      margin: 0;
-      text-decoration: none;
-    }
-
-    .menu-button {
-      color: $foreground;
-    }
-
-    div {
+    .top-navigation {
+      z-index: 1;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      background-color: $background-color;
+      color: $foreground-terciary;
+      padding: $padding;
 
-      nav {
-        ul {
-          list-style: none;
-          display: flex;
+      .logo {
+        font-weight: 600;
+        color: $foreground-terciary;
+        text-decoration: none;
+      }
+    }
 
-          li {
-            a {
-              text-decoration: none;
-              transition: color 200ms ease-in-out;
-
-              &.active {
-                font-weight: 600;
-              }
-
-              &:hover {
-                color: hsl(0, 0%, 100%);
-              }
+    .navigation-menu {
+      z-index: -1;
+      position: absolute;
+      transform: translateY(-100%);
+      width: 100%;
+      padding: $padding;
+      background-color: $background-color;
+      transition: transform 200ms ease-in-out;
+      &.active {
+        transform: translateY(0);
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        li {
+          margin: 1rem 0;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: $foreground-terciary;
+            transition: color 200ms ease-in-out;
+            &:hover {
+              color: $foreground-primary;
             }
-            a {
-              color: $foreground;
+
+            &.active {
+              font-weight: 600;
+              color: $foreground-primary;
             }
           }
         }
@@ -58,22 +68,33 @@ import HeaderLink from './HeaderLink.astro';
 </style>
 <!-- Component -->
 <header>
-  <div>
-    <a class='logo' href='/'>Adrian</a>
-    <!-- Google Icons' class  -->
-    <span class="material-symbols-outlined menu-button">menu</span>
-    <nav>
+  <div class='container'>
+    <div class='top-navigation'>
+      <a href='/' class='logo'>Adrian</a>
+      <span id='menu-button' class='burger-button material-symbols-outlined'
+        >menu</span
+      >
+    </div>
+    <nav id='menu-nav' class='navigation-menu'>
       <ul>
         <li>
-          <HeaderLink class='link' href={'/'}>Inicio</HeaderLink>
+          <HeaderLink href='/'>Home</HeaderLink>
         </li>
         <li>
-          <HeaderLink class='link' href={'/acercade'}>Acerca de</HeaderLink>
+          <HeaderLink href='/blog'>Blog</HeaderLink>
         </li>
         <li>
-          <HeaderLink class='link' href={'/blog'}>Blog</HeaderLink>
+          <HeaderLink href='/about'>About</HeaderLink>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const menuNav = document.getElementById('menu-nav');
+
+  menuButton.addEventListener('click', () => {
+    menuNav.classList.toggle('active');
+  });
+</script>

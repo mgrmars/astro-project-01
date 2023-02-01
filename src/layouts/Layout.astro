@@ -36,10 +36,18 @@ const { pageTitle, pageDescription } = Astro.props;
     <title>Astro | {pageTitle}</title>
   </head>
   <body>
+    <style>
+      .container {
+        margin-top: 2.31rem;
+        padding-top: 1rem;
+      }
+    </style>
     <div class='content'>
       <Header />
       <main>
+        <div class="container">
         <slot />
+        </div>
       </main>
     </div>
   </body>

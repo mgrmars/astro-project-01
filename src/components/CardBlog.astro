@@ -1,0 +1,40 @@
+---
+interface Props {
+  href?: string;
+  title: string;
+  author: string;
+  resumen: string;
+}
+
+const { href, resumen, title, author } = Astro.props;
+---
+
+<!-- Style: SASS (.scss)  -->
+<style lang='scss'>
+  a {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: hsl(25, 21%, 48%);
+    color: hsla(0, 0%, 100%, 90%);
+    text-decoration: none;
+		border-radius: 0.8rem;
+
+    .title {
+      background-color: inherit;
+			margin-bottom: 0;
+    }
+
+    .author {
+    }
+
+    .resumen {
+      margin-bottom: 0;
+    }
+  }
+</style>
+<!-- Component -->
+<a class='post' href={href}>
+  <h3 class='title'>{title}</h3>
+
+</a>

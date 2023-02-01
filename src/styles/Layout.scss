@@ -15,17 +15,26 @@ html {
 }
 
 body {
+  background-color: hsl(26, 47%, 97%);
+
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(233, 233, 233, 1) 100%
-  );
 }
 
 main {
-  padding: 1.6rem;
+  position: relative;
+  padding: 2.2rem 1.6rem;
   color: hsla(0, 0%, 0%, 90%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, img {
+  margin-block-end: 1rem;
+  line-height: 124%;
 }
 
 img {

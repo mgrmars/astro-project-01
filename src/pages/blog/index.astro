@@ -1,28 +1,25 @@
 ---
-import '../../styles/Blog.css';
 import Layout from '../../layouts/Layout.astro';
-import ButtonBlog from '../../components/ButtonBlog.astro';
+import ButtonBlog from '../../components/CardBlog.astro';
 
 const posts = await Astro.glob('./posts/*.md');
 ---
 
 <Layout pageTitle='posts' pageDescription='Posts de mi blog'>
-	<h1>Blog</h1>
+  <h1>Blog</h1>
 
-	<img src='' alt='' />
+  <p class='text'>Entradas subidas al blog.</p>
 
-	<p class='text'>Entradas subidas al blog.</p>
-
-	{
-		posts.map((post) => {
-			return (
-				<ButtonBlog
-					href={post.url}
-					title={post.frontmatter.title}
-					author={post.frontmatter.author}
-					resumen={post.frontmatter.resumen}
-				/>
-			);
-		})
-	}
+  {
+    posts.map((post) => {
+      return (
+        <ButtonBlog
+          href={post.url}
+          title={post.frontmatter.title}
+          author={post.frontmatter.author}
+          resumen={post.frontmatter.resumen}
+        />
+      );
+    })
+  }
 </Layout>

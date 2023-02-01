@@ -1,8 +1,0 @@
-.container .button {
-	display: block;
-	padding: 1.2rem 2.8rem;
-	background-color: hsl(338, 100%, 86%);
-	max-width: fit-content;
-	border-radius: 2.8rem;
-	font-weight: 600;
-}
