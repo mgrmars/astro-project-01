@@ -1,7 +1,7 @@
 ---
-import '../styles/Layout.scss';
+import "../styles/Layout.scss";
 
-import Header from '../components/Header/Header.astro';
+import Header from "../components/Header/Header.astro";
 
 interface Props {
   pageTitle: string;
@@ -12,41 +12,35 @@ const { pageTitle, pageDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
   <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='description' content={pageDescription} />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content={pageDescription} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts and icons from Google Fonts -->
     <!-- Start font tags -->
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href='https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap'
-      rel='stylesheet'
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
     />
     <!-- End font tags -->
     <!-- Start icon tags -->
     <link
-      rel='stylesheet'
-      href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <!-- End icon tags  -->
-    <title>Astro | {pageTitle}</title>
+    <title>Adrian | {pageTitle}</title>
   </head>
   <body>
-    <style>
-      .container {
-        margin-top: 2.31rem;
-        padding-top: 1rem;
-      }
-    </style>
-    <div class='content'>
+    <div class="content">
       <Header />
       <main>
         <div class="container">
-        <slot />
+          <slot />
         </div>
       </main>
     </div>

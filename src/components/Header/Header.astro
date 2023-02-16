@@ -1,100 +1,134 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import HeaderLink from "./HeaderLink.astro";
 ---
 
 <!-- Style -->
-<style lang='scss'>
-  $background-color: hsl(0, 0%, 15%);
-  $foreground-primary: hsl(0, 0%, 95%);
-  $foreground-secondary: hsl(0, 0%, 85%);
-  $foreground-terciary: hsl(0, 0%, 80%);
-
-  $padding: 1.2rem 1.6rem;
-  .container {
+<style lang="scss">
+  header {
     z-index: 2;
-    position: fixed;
-    width: 100%;
-    .top-navigation {
-      z-index: 1;
+    position: relative;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
+
+    .navigation-container {
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: $background-color;
-      color: $foreground-terciary;
-      padding: $padding;
 
       .logo {
-        font-weight: 600;
-        color: $foreground-terciary;
         text-decoration: none;
+        margin-block-end: 0;
+      }
+
+      .burger-button {
+        margin-block-end: 0;
       }
     }
 
-    .navigation-menu {
-      z-index: -1;
+    .navigation-list-container {
+      display: none;
       position: absolute;
-      transform: translateY(-100%);
+      padding: 1rem 2rem;
+      background-color: hsl(0, 0%, 20%);
       width: 100%;
-      padding: $padding;
-      background-color: $background-color;
-      transition: transform 200ms ease-in-out;
-      &.active {
-        transform: translateY(0);
-      }
+      transition: opacity 0.2s ease-in-out;
+
       ul {
+        text-align: center;
         display: flex;
         flex-direction: column;
-        list-style: none;
-        li {
-          margin: 1rem 0;
-          text-align: center;
-          a {
-            text-decoration: none;
-            color: $foreground-terciary;
-            transition: color 200ms ease-in-out;
-            &:hover {
-              color: $foreground-primary;
-            }
+        align-items: center;
 
-            &.active {
-              font-weight: 600;
-              color: $foreground-primary;
+        .small-title {
+          font-weight: 600;
+          font-size: 0.8rem;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          opacity: 0.6;
+        }
+
+        li {
+          list-style-type: none;
+
+          .link {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 200ms ease-in-out;
+            
+            &:hover {
+              opacity: 0.8;
             }
           }
         }
       }
+      &.active {
+        display: block;
+      }
     }
   }
+
+  // Keyframe animation, opacity from 0 to 100 in 200ms, ease-in-out, when opening the menu, from 100 to 0 when closing the menu
+  @keyframes menuAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  // same animation in reverse
+  @keyframes menuAnimationReverse {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
 </style>
 <!-- Component -->
 <header>
-  <div class='container'>
-    <div class='top-navigation'>
-      <a href='/' class='logo'>Adrian</a>
-      <span id='menu-button' class='burger-button material-symbols-outlined'
-        >menu</span
-      >
-    </div>
-    <nav id='menu-nav' class='navigation-menu'>
-      <ul>
-        <li>
-          <HeaderLink href='/'>Home</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink href='/blog'>Blog</HeaderLink>
-        </li>
-        <li>
-          <HeaderLink href='/about'>About</HeaderLink>
-        </li>
-      </ul>
-    </nav>
+  <div class="navigation-container">
+    <a href="/" class="logo">Adrian</a>
+    <span id="button" class="burger-button material-symbols-outlined">menu</span
+    >
   </div>
+  <nav id="nav" class="navigation-list-container">
+    <ul>
+      <span class="small-title">Navegación</span>
+      <li>
+        <HeaderLink class="link" href="/">Inicio</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink class="link" href="/blog">Blog</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink class="link" href="/about">Biografía</HeaderLink>
+      </li>
+    </ul>
+  </nav>
 </header>
 <script>
-  const menuButton = document.getElementById('menu-button');
-  const menuNav = document.getElementById('menu-nav');
+  const menuButton = document.getElementById("button");
+  const menuNav = document.getElementById("nav");
 
-  menuButton.addEventListener('click', () => {
-    menuNav.classList.toggle('active');
+  menuButton.addEventListener("click", () => {
+    menuNav.classList.toggle("active");
+    menuButton.innerText = menuButton.innerText === "menu" ? "close" : "menu";
+    
+    if (menuNav.classList.contains("active")) {
+      menuNav.style.opacity = "1";
+      menuNav.style.display = "block";
+      menuNav.style.animation = "menuAnimation 0.2s ease-in-out";
+    } else {
+      menuNav.style.opacity = "0";
+      menuNav.style.animation = "menuAnimationReverse 0.2s ease-in-out";
+      setTimeout(() => {
+        menuNav.style.display = "none";
+      }, 200);
+    }
   });
 </script>

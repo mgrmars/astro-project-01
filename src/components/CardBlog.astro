@@ -10,31 +10,23 @@ const { href, resumen, title, author } = Astro.props;
 ---
 
 <!-- Style: SASS (.scss)  -->
-<style lang='scss'>
-  a {
+<style lang="scss">
+  .post {
     display: block;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: hsl(25, 21%, 48%);
-    color: hsla(0, 0%, 100%, 90%);
     text-decoration: none;
-		border-radius: 0.8rem;
-
-    .title {
-      background-color: inherit;
-			margin-bottom: 0;
-    }
+    margin-block-end: 1rem;
+    padding: 1rem;
+    color: inherit;
+    outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
+    border-radius: 0.2rem;
 
     .author {
-    }
-
-    .resumen {
-      margin-bottom: 0;
+      font-weight: 500;
     }
   }
 </style>
 <!-- Component -->
-<a class='post' href={href}>
-  <h3 class='title'>{title}</h3>
-
+<a class="post" href={href}>
+  <h3 class="title">{title}</h3>
+  <span>de <span class="author">{author}</span></span>
 </a>
