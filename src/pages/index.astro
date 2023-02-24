@@ -3,7 +3,20 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout pageTitle="inicio" pageDescription="Página inicio">
-  <h1>En construcción</h1>
-  <p>Todavia estoy diseñando y programando partes de la interfaz, me esta tomando más de lo normal :P. </p>
-  <p>Creo que inicié el 1 de enero, pero estuve estudiando otras tecnologías, ademas, tengo clases extracurriculares de Calculo y clases virtuales de Ingles.</p>
+  <style lang="scss">
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        font-size: 3rem;
+      }
+
+    }
+  </style>
+  <article>
+    <h1>Hola</h1>
+    <p>Esta es mi página web</p>
+  </article>
 </Layout>

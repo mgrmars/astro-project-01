@@ -23,7 +23,7 @@ const posts = await Astro.glob("./posts/*.md");
             href={post.url}
             title={post.frontmatter.title}
             author={post.frontmatter.author}
-            resumen={post.frontmatter.resumen}
+            date={post.frontmatter.date}
           />
         );
       })
