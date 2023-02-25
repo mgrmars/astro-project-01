@@ -1,9 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import ButtonBlog from "../../components/CardBlog.astro";
+import CardBlog from "../../components/Cards/CardBlog.astro";
 
 const posts = await Astro.glob("./posts/*.md");
 ---
+
 <style lang="scss">
   .description {
     margin-block-end: 2rem;
@@ -19,7 +20,7 @@ const posts = await Astro.glob("./posts/*.md");
     {
       posts.map((post) => {
         return (
-          <ButtonBlog
+          <CardBlog
             href={post.url}
             title={post.frontmatter.title}
             author={post.frontmatter.author}

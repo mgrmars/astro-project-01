@@ -4,16 +4,19 @@ const { class: className, ...props } = Astro.props;
 const { pathname } = Astro.url;
 
 let isActive: boolean;
-const blogPath = '/blog';
+const blogPath = "/blog";
 // href is the same as pathname
 // href is the same as pathname ignoring trailing slash
-if (blogPath === pathname || blogPath === pathname.replace(/\/$/, '')) {
+if (blogPath === pathname || blogPath === pathname.replace(/\/$/, "")) {
   isActive = true;
 } else {
   isActive = false;
 }
 ---
 
-<nav class:list={[className, { active: isActive }, "navigation-blog"]} {...props}>
+<nav
+  class:list={[className, { active: isActive }, "navigation-blog"]}
+  {...props}
+>
   <slot />
 </nav>

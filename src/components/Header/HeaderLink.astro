@@ -7,12 +7,13 @@ let isActive: boolean;
 
 // href is the same as pathname
 // href is the same as pathname ignoring trailing slash
-if (href === pathname || href === pathname.replace(/\/$/, '')) {
+if (href === pathname || href === pathname.replace(/\/$/, "")) {
   isActive = true;
 } else {
   isActive = false;
 }
 ---
+
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
   <slot />
 </a>

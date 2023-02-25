@@ -1,22 +1,31 @@
 ---
+import CardBlog from "../components/Cards/CardBlog.astro";
 import Layout from "../layouts/Layout.astro";
+import sombra001 from "../images/sombra001.jpg";
+
+const posts = await Astro.glob("./blog/posts/*.md");
+const post = posts[0];
 ---
 
 <Layout pageTitle="inicio" pageDescription="Página inicio">
   <style lang="scss">
-    article {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      h1 {
-        font-size: 3rem;
-      }
-
-    }
+    
   </style>
   <article>
-    <h1>Hola</h1>
-    <p>Esta es mi página web</p>
+    <h1>Imágen de la semana</h1>
+    <p>Te quiero mucho mi gatito Sombra.</p>
+    <img src={sombra001} alt="Gato bombay un poco gordito">
+    <h2>Actualizaciones</h2>
+    <p>Último post.</p>
+    {
+      (
+        <CardBlog
+          href={post.url}
+          title={post.frontmatter.title}
+          author={post.frontmatter.author}
+          date={post.frontmatter.date}
+        />
+      )
+    }
   </article>
 </Layout>

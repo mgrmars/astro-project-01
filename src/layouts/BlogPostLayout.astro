@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<style lang="scss">
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .date,
+  .author {
+    font-weight: 500;
+  }
+</style>
+
+<Layout pageTitle={frontmatter.title} pageDescription={frontmatter.resumen}>
+  <h1>{frontmatter.title}</h1>
+  <p class="description">
+    publicado el
+    <span class="date">{frontmatter.date}</span>
+    por
+    <span class="author">{frontmatter.author}</span>
+  </p>
+  <slot />
+</Layout>
