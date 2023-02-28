@@ -6,9 +6,12 @@ $text-font: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe 
 
 $color-01: hsl(270, 100%, 98%);
 $color-02: hsl(223, 100%, 97%);
+$color-03: hsl(269, 100%, 91%);
+$color-04: hsl(224, 93%, 89%);
 
 $background-gradient: linear-gradient(62deg, $color-02 0%, $color-01 100%);
 $background-gradient-fallback: $color-02;
 
 $background-gradient-boxes-fallback: $color-02;
 $background-gradient-boxes: linear-gradient(120deg, $color-02 0%, $color-01 100%);
+$background-gradient-boxes-hover: linear-gradient(120deg, $color-02 0%, $color-03 100%);

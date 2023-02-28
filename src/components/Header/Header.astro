@@ -4,13 +4,14 @@ import HeaderLink from "./HeaderLink.astro";
 const { pathname } = Astro.url;
 
 // Display a section in header when on blog post page
-const isBlogPost = (pathname.startsWith("/blog/") && pathname !== "/blog/");
+const isBlogPost = pathname.startsWith("/blog/") && pathname !== "/blog/";
 
 const visible = isBlogPost ? " visible" : "";
 ---
 
 <!-- Style -->
 <style lang="scss">
+  @use "../../styles/variables";
   header {
     z-index: 2;
     position: relative;
@@ -99,17 +100,21 @@ const visible = isBlogPost ? " visible" : "";
 
       a {
         max-width: fit-content;
-        margin: auto;
         display: block;
-        background-color: hsla(0, 0%, 0%, 70%);
-        color: inherit;
+        color: hsla(0, 0%, 0%, 100%);
         padding: 0.6rem 1.3rem;
         border-radius: 0.4rem;
+        outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
+        background-color: variables.$color-02;
         text-decoration: none;
-        transition: opacity 200ms ease-in-out;
+        transition: background-color 200ms ease-in-out;
+
+        &:before {
+          content: "> ";
+        }
 
         &:hover {
-          opacity: 0.8;
+          background-color: variables.$color-03;
         }
       }
     }
