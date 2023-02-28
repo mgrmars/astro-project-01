@@ -10,6 +10,8 @@ const { href, title, author, date } = Astro.props;
 ---
 
 <style lang="scss">
+
+  @use '../../styles/variables';
   .post {
     max-width: fit-content;
     display: block;
@@ -18,12 +20,13 @@ const { href, title, author, date } = Astro.props;
     padding: 1rem;
     color: inherit;
     outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
+    background-color: variables.$background-gradient-boxes-fallback;
+    background-image: variables.$background-gradient-boxes;
     border-radius: 0.3rem;
     transition: background-color 0.2s ease-in-out;
     box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
 
     &:hover {
-      background-color: hsla(0, 0%, 0%, 3%);
     }
 
     &:focus-visible {

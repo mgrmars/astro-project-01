@@ -4,7 +4,7 @@ import HeaderLink from "./HeaderLink.astro";
 const { pathname } = Astro.url;
 
 // Display a section in header when on blog post page
-const isBlogPost = pathname.startsWith("/blog/");
+const isBlogPost = (pathname.startsWith("/blog/") && !pathname.endsWith("/"));
 
 const visible = isBlogPost ? " visible" : "";
 ---
