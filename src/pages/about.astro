@@ -1,7 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import cat001 from "../images/cat-001.jpg";
 ---
+
+<style lang="scss">
+
+	@use '../styles/variables';
+  a {
+    background-color: variables.$color-02;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: variables.$color-03;
+    }
+  }
+</style>
 
 <Layout pageTitle="acerca de" pageDescription="Página acerca de">
   <h1>Acerca de mí</h1>
@@ -14,9 +26,10 @@ import cat001 from "../images/cat-001.jpg";
   <p>Este sitio web está creado usando Astro y Sass principalmente.</p>
   <p>
     Puedes conocer más acerca de mi en
-    <a href="/blog/posts/acerca-de-mi">este post</a>. Puedes contactarme por
-    medio de mi perfil de <a target="_blank" href="https://github.com/mgrmars"
-      >Github</a
+    <a class="hyperlink" href="/blog/posts/acerca-de-mi">este post</a>. Puedes
+    contactarme por medio de mi perfil de <a
+      target="_blank"
+      href="https://github.com/mgrmars">Github</a
     >.
   </p>
 </Layout>

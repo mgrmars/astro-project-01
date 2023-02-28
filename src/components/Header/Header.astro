@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import SecondaryButton from '../Buttons/SecondaryButton.astro'
 
 const { pathname } = Astro.url;
 
@@ -15,7 +16,7 @@ const visible = isBlogPost ? " visible" : "";
   header {
     z-index: 2;
     position: relative;
-    color: hsl(0, 0%, 90%);
+    color: hsla(0, 0%, 100%, 90%);
 
     .navigation-container {
       background-color: hsl(0, 0%, 20%);
@@ -33,6 +34,11 @@ const visible = isBlogPost ? " visible" : "";
         margin-block-end: 0;
         font-weight: 600;
         font-size: 1.2rem;
+        transition: color 200ms ease-in-out;
+
+        &:hover {
+          color: variables.$color-03;
+        }
       }
 
       .burger-button {
@@ -73,11 +79,11 @@ const visible = isBlogPost ? " visible" : "";
             transition: opacity 200ms ease-in-out;
 
             &:hover {
-              opacity: 0.8;
+              color: variables.$color-03;
             }
 
             &.active {
-              opacity: 0.8;
+              color: variables.$color-04;
             }
           }
         }
@@ -96,26 +102,6 @@ const visible = isBlogPost ? " visible" : "";
 
       &.visible {
         display: block;
-      }
-
-      a {
-        max-width: fit-content;
-        display: block;
-        color: hsla(0, 0%, 0%, 100%);
-        padding: 0.6rem 1.3rem;
-        border-radius: 0.4rem;
-        outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
-        background-color: variables.$color-02;
-        text-decoration: none;
-        transition: background-color 200ms ease-in-out;
-
-        &:before {
-          content: "> ";
-        }
-
-        &:hover {
-          background-color: variables.$color-03;
-        }
       }
     }
   }
@@ -166,7 +152,7 @@ const visible = isBlogPost ? " visible" : "";
     </ul>
   </nav>
   <nav class={"blog-index" + visible}>
-    <a tabindex="2" href="/blog">Regresar al blog</a>
+    <SecondaryButton href="/blog">Regresar al blog</SecondaryButton>
   </nav>
 </header>
 <script>

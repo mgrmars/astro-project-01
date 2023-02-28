@@ -1,0 +1,51 @@
+---
+---
+
+<style lang="scss">
+  @use "../../styles/variables";
+  footer {
+    padding: 1rem 2rem;
+    background-color: variables.$color-05;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+
+    * {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      color: variables.$color-06;
+      font-size: inherit;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+      color: variables.$color-06;
+      font-size: inherit;
+        transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: variables.$color-03;
+      }
+    }
+  }
+</style>
+<footer>
+  <section>
+    <p>Página web creada por Adrian Gonzales.</p>
+    <p>Última actualización: 27/02/2023.</p>
+  </section>
+  <section>
+    <p>Información de contacto</p>
+    <ul>
+      <li>
+        <a href="#">Github</a>
+      </li>
+    </ul>
+  </section>
+</footer>

@@ -6,7 +6,7 @@ resumen: Acerca de mi vida personal y habilidades
 date: 25/02/2023
 ---
 
-Soy Miguel Gonzales, un joven peruano nacido en la ciudad de Tarapoto en 2004. Desde mi infancia, he demostrado un gran interés por la tecnología y los videojuegos, pero fue en mi adolescencia cuando descubrí mi verdadera pasión: la programación.
+Soy Miguel Gonzales, nací en la ciudad de Tarapoto en Marzo del 2004. Desde mi infancia, he demostrado un gran interés por la tecnología y los videojuegos, pero fue en mi adolescencia cuando descubrí mi verdadera pasión: la programación.
 
 Durante mi tiempo libre, disfruto programando, escuchando música y saliendo a caminar. En cuanto a música, tengo una gran predilección por la alternativa, considerando este género musical como muy versátil y creativo.
 

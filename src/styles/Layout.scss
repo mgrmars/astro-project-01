@@ -12,7 +12,7 @@
 
 html {
   font-family: variables.$text-font;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 body {
@@ -22,6 +22,7 @@ body {
 }
 
 main {
+  min-height: calc(100vh - 2.1rem);
   position: relative;
   padding: 2rem;
   color: hsla(0, 0%, 0%, 90%);
@@ -81,7 +82,7 @@ h3 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.8;
 }
 
@@ -94,3 +95,4 @@ img {
   /* smooth shadow */
   box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
 }
+
