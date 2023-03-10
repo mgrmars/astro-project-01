@@ -1,20 +1,21 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: Acerca de mi
-author: Miguel Gonzales
-resumen: Acerca de mi vida personal y habilidades
-date: 25/02/2023
+title: "Acerca de mi"
+author: "Miguel Gonzales"
+resumen: "Acerca de mi vida personal y habilidades"
+date: 02-25-2023
+draft: false
 ---
 
-Soy Miguel Gonzales, nací en la ciudad de Tarapoto en Marzo del 2004. Desde mi infancia, he demostrado un gran interés por la tecnología y los videojuegos, pero fue en mi adolescencia cuando descubrí mi verdadera pasión: la programación.
+Soy Miguel Gonzales, nací en la ciudad de Tarapoto en Marzo del 2004. Desde mi infancia, he demostrado un gran interés por la tecnología y los videojuegos, pero fue en mi adolescencia cuando descubrí mi verdadera pasión: el desarrollo de software.
 
-Durante mi tiempo libre, disfruto programando, escuchando música y saliendo a caminar. En cuanto a música, tengo una gran predilección por la alternativa, considerando este género musical como muy versátil y creativo.
+Durante mi tiempo libre, disfruto programando, diseñando, escuchando música , leyendo y saliendo a caminar. En cuanto a música, me gusta el genero alternativo y la música indie, considero este género musical como muy versátil y creativo.
 
 Comencé a interesarme por la tecnología a los 10 años, jugando juegos como Resident Evil 4 y God of War 2 en mi PlayStation 2. A los 12 años, tomé un curso de computación donde aprendí HTML, lo que me llevó a mi primer acercamiento al desarrollo web. A los 14 años, empecé a estudiar JavaScript fuera del navegador para crear scripts para CSGO, lo que aumentó mi pasión por el desarrollo de software.
 
-A los 15 años, comencé a programar con las tecnologías web básicas: HTML, CSS y JavaScript, y ocasionalmente programaba en otros lenguajes como Python, C, C++, Java y C#. También aprendí sobre Linux y decidí instalar Debian Linux sin afectar a Windows en mi computadora, desde entonces, me apegé a Linux durante varios meses.
+A los 15 años, comencé a programar con las tecnologías web básicas: HTML, CSS y JavaScript junto con Node.js, y ocasionalmente programaba en otros lenguajes como Python, C, C++, Java y C#. También aprendí sobre Linux y decidí instalar Debian Linux sin afectar a Windows en mi computadora, desde entonces, me apegé a Linux durante varios meses.
 
-En mi adolescencia, debido a problemas de ansiedad y depresión, no asistí a la escuela, pero me dediqué al scripting de cheats para juegos en JavaScript, Git, Github, ciberseguridad, OSINT y me especialicé en el OpSec de internet.
+En mi adolescencia, debido a problemas de ansiedad y depresión, no asistí al ultimo año de clases, pero me dediqué al scripting de cheats para juegos en JavaScript, Git, Github, ciberseguridad, OSINT y me especialicé en el OpSec de internet, estuve muy enfocado en esto.
 
 A los 17 años, di el examen de ingreso a la Universidad Peruana Unión para la carrera de Ingeniería de Sistemas, pero los cursos no comenzaron ese año debido a que no se completó el mínimo de estudiantes requeridos. Finalmente, las clases iniciaron en el 2022.
 

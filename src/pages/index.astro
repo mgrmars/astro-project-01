@@ -1,16 +1,18 @@
 ---
+// components
 import CardBlog from "../components/Cards/CardBlog.astro";
 import Layout from "../layouts/Layout.astro";
-import sombra001 from "../images/sombra001.jpg";
+
+// utils
+import { formatBlogPost } from "../js/utils";
 
 const posts = await Astro.glob("./blog/posts/*.md");
-const post = posts[0];
+const formattedPosts = formatBlogPost(posts, { filterOutFuturePosts: false });
+const post = formattedPosts[0];
 ---
 
 <Layout pageTitle="inicio" pageDescription="Página inicio">
-  <style lang="scss">
-    
-  </style>
+  <style lang="scss"></style>
   <article>
     <h3>Último post</h3>
     {

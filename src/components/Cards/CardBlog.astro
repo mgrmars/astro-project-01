@@ -11,8 +11,7 @@ const { href, title, author, date, resumen } = Astro.props;
 ---
 
 <style lang="scss">
-
-  @use '../../styles/variables';
+  @use "../../styles/variables";
   .post {
     max-width: fit-content;
     display: block;
@@ -27,7 +26,7 @@ const { href, title, author, date, resumen } = Astro.props;
     box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
 
     &:hover {
-    background-image: none;
+      background-image: none;
 
       background-color: variables.$color-03;
     }
@@ -36,7 +35,6 @@ const { href, title, author, date, resumen } = Astro.props;
       outline-width: 0.2rem;
       outline-color: hsla(0, 0%, 0%, 50%);
     }
-
 
     .information {
       display: block;
@@ -47,7 +45,6 @@ const { href, title, author, date, resumen } = Astro.props;
     .title {
       margin-block-end: 0.4rem;
     }
-
 
     .author,
     .date {

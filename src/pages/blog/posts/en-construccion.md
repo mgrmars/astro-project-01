@@ -1,9 +1,10 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: En construcción
-author: Miguel Gonzales
-resumen: Estado de la página web
-date: 11/02/2023
+title: "En construcción"
+author: "Miguel Gonzales"
+resumen: "Estado de la página web"
+date: 02-11-2023
+draft: false
 ---
 
 Todavia estoy diseñando y programando partes de la interfaz, me esta tomando más de lo normal :P.

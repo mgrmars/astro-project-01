@@ -7,8 +7,7 @@ const { href } = Astro.props;
 ---
 
 <style lang="scss">
-
-@use '../../styles/variables';
+  @use "../../styles/variables";
 
   a {
     max-width: fit-content;
@@ -21,7 +20,7 @@ const { href } = Astro.props;
     text-decoration: none;
     transition: background-color 200ms ease-in-out;
     box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
-    
+
     &:hover {
       background-color: variables.$color-03;
     }
