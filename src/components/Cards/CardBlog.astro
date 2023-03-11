@@ -7,9 +7,10 @@ interface Props {
   title: string;
   author: string;
   resumen: string;
+  class?: string;
 }
 
-const { href, title, author, date, resumen } = Astro.props;
+const { href, title, author, date, resumen, class: className } = Astro.props;
 ---
 
 <style lang="scss">
@@ -18,8 +19,8 @@ const { href, title, author, date, resumen } = Astro.props;
     max-width: fit-content;
     display: block;
     text-decoration: none;
-    margin-block-end: 1rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 1.3rem;
     color: inherit;
     background-color: variables.$background-gradient-boxes-fallback;
     border-radius: 0.5rem;
@@ -36,15 +37,16 @@ const { href, title, author, date, resumen } = Astro.props;
       outline-color: hsla(0, 0%, 0%, 50%);
     }
 
+    .title {
+      margin-block-end: 0.6rem;
+    }
+  
     .information {
       display: block;
       font-size: 0.8rem;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.6rem;
     }
 
-    .title {
-      margin-block-end: 0.4rem;
-    }
 
     .author,
     .date {
@@ -57,7 +59,7 @@ const { href, title, author, date, resumen } = Astro.props;
   }
 </style>
 
-<a class="post" href={href}>
+<a class={className, "post"} href={href}>
   <h3 class="title">{title}</h3>
   <span class="information">
     publicado

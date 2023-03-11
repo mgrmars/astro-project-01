@@ -9,6 +9,11 @@ const formattedPosts = formatBlogPost(posts, { filterOutFuturePosts: false });
 ---
 
 <style lang="scss">
+
+  .card {
+    margin-bottom: 1.6rem;
+  }
+
   .description {
     margin-block-end: 2rem;
   }
@@ -18,18 +23,19 @@ const formattedPosts = formatBlogPost(posts, { filterOutFuturePosts: false });
     <h1>Blog</h1>
     <p>Entradas subidas al blog.</p>
   </div>
-
   <section class="posts">
     {
       formattedPosts.map((post) => {
         return (
-          <CardBlog
-            href={post.url}
-            title={post.frontmatter.title}
-            author={post.frontmatter.author}
-            date={post.frontmatter.date}
-            resumen={post.frontmatter.resumen}
-          />
+          <div class="card">
+            <CardBlog
+              href={post.url}
+              title={post.frontmatter.title}
+              author={post.frontmatter.author}
+              date={post.frontmatter.date}
+              resumen={post.frontmatter.resumen}
+            />
+          </div>
         );
       })
     }
