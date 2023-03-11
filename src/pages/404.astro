@@ -2,17 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout pageTitle="Page not found" pageDescription="Page not found ">
-  <div>
-    <h1>Página no encontrada</h1>
-    <p>
-      Lo sentimos, pero parece que has llegado a una página que no existe o que
-      ha sido eliminada.
-    </p>
-    <a href="/">Ir a inicio</a>
-  </div>
-</Layout>
-
 <style>
   div {
     max-width: 60ch;
@@ -24,3 +13,10 @@ import Layout from "../layouts/Layout.astro";
     justify-content: center;
   }
 </style>
+<Layout pageTitle="Page not found" pageDescription="Page not found ">
+  <div>
+    <h1>Página no encontrada</h1>
+    <p>Lo siento, pero pero esa página no existe o ha sido eliminada.</p>
+    <a href="/">Ir a inicio</a>
+  </div>
+</Layout>

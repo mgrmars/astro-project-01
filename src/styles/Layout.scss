@@ -1,7 +1,6 @@
 // import scss variables using scss syntax
 @use "variables";
 
-
 *,
 *::before,
 *::after {
@@ -95,4 +94,3 @@ img {
   /* smooth shadow */
   box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
 }
-
