@@ -1,4 +1,6 @@
 ---
+import { formatDate } from '../../js/utils';
+
 interface Props {
   href?: string;
   date: string;
@@ -19,15 +21,13 @@ const { href, title, author, date, resumen } = Astro.props;
     margin-block-end: 1rem;
     padding: 1rem;
     color: inherit;
-    outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
     background-color: variables.$background-gradient-boxes-fallback;
-    border-radius: 0.3rem;
-    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
     box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
 
     &:hover {
       background-image: none;
-
       background-color: variables.$color-03;
     }
 
@@ -39,7 +39,7 @@ const { href, title, author, date, resumen } = Astro.props;
     .information {
       display: block;
       font-size: 0.8rem;
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.4rem;
     }
 
     .title {
@@ -61,7 +61,7 @@ const { href, title, author, date, resumen } = Astro.props;
   <h3 class="title">{title}</h3>
   <span class="information">
     publicado
-    <span class="date">{date}</span>
+    <span class="date">{formatDate(date)}</span>
     por
     <span class="author">{author}</span>
   </span>

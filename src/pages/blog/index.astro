@@ -2,10 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import CardBlog from "../../components/Cards/CardBlog.astro";
 
-import { formatBlogPost } from "../../js/utils";
+import { formatBlogPost, formatDate } from "../../js/utils";
 
 const posts = await Astro.glob("./posts/*.md");
-const formattedPosts = formatBlogPost(posts, {filterOutFuturePosts: false});
+const formattedPosts = formatBlogPost(posts, { filterOutFuturePosts: false });
 ---
 
 <style lang="scss">

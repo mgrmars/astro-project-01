@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import { formatDate } from "../js/utils";
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -29,7 +31,7 @@ const { frontmatter } = Astro.props;
   <h1>{frontmatter.title}</h1>
   <p class="description">
     publicado el
-    <span class="date">{frontmatter.date}</span>
+    <span class="date">{formatDate(frontmatter.date)}</span>
     por
     <span class="author">{frontmatter.author}</span>
   </p>

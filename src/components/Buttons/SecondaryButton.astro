@@ -12,17 +12,18 @@ const { href } = Astro.props;
   a {
     max-width: fit-content;
     display: block;
-    color: hsla(0, 0%, 0%, 100%);
+    margin: 0;
+    font-weight: 600;
+    color: hsla(0, 0%, 0%, 90%);
     padding: 0.6rem 1.3rem;
-    border-radius: 0.4rem;
-    outline: 0.1rem solid hsla(0, 0%, 0%, 20%);
-    background-color: variables.$color-02;
+    border-radius: 2rem;
+    background-color: hsl(201, 84%, 80%);
     text-decoration: none;
-    transition: background-color 200ms ease-in-out;
     box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: variables.$color-03;
+      background-color: hsl(201, 100%, 66%);
     }
   }
 </style>

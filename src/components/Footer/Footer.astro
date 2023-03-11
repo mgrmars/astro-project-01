@@ -1,4 +1,5 @@
 ---
+import { formatDate } from "../../js/utils";
 ---
 
 <style lang="scss">
@@ -9,13 +10,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
+    gap: 1rem;
 
     * {
       margin: 0;
     }
 
     p {
-      margin: 0;
       color: variables.$color-06;
       font-size: inherit;
     }
@@ -33,18 +34,26 @@
         color: variables.$color-03;
       }
     }
+
+    address {
+      font-style: normal;
+    }
+
+    .website-author {
+      margin-bottom: 0.5rem;
+    }
   }
 </style>
 <footer>
   <section>
-    <p>Página web creada por Adrian Gonzales.</p>
-    <p>Última actualización: 27/02/2023.</p>
+    <p class="website-author">Sitio web creado por Adrian Gonzales.</p>
+    <p class="last-update">Última actualización {formatDate("03-10-2023")}</p>
   </section>
   <address>
-    <p>Información de contacto</p>
+    <p>Contacto</p>
     <ul>
       <li>
-        <a target="_blank" href="https://github.com/mgrmars">Github</a>
+        <a target="_blank" href="https://github.com/mgrmars">Perfil de Github</a>
       </li>
     </ul>
   </address>

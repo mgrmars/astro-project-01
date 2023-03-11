@@ -10,6 +10,12 @@ export function slugify(text) {
     .replace(/-+$/, ""); // Trim - from end of text
 }
 
+export function formatDate(date) {
+  return new Date(date).toLocaleDateString("es-PE", {
+    timeZone: "America/Lima",
+  });
+}
+
 // Function to format blog posts
 export function formatBlogPost(
   posts,
