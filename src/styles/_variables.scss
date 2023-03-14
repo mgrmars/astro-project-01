@@ -3,12 +3,12 @@ $text-font: "readex pro", system-ui, -apple-system, BlinkMacSystemFont,
   sans-serif;
 $display-font: $text-font;
 
-$color-01: hsl(272, 100%, 96%);
-$color-02: hsl(223, 100%, 95%);
-$color-03: hsl(269, 100%, 88%);
-$color-04: hsl(224, 95%, 85%);
-$color-05: hsl(0, 0%, 20%);
-$color-06: hsla(0, 0%, 100%, 90%);
+$color-01: hsl(271, 94%, 94%);
+$color-02: hsl(221, 100%, 92%);
+$color-03: hsl(269, 100%, 87%);
+$color-04: hsl(224, 100%, 84%);
+$color-05: hsl(269, 100%, 78%);
+$color-06: hsl(224, 100%, 76%);
 
 $background-gradient: linear-gradient(62deg, $color-02 0%, $color-01 100%);
 $background-gradient-fallback: $color-02;
@@ -24,3 +24,5 @@ $background-gradient-boxes-hover: linear-gradient(
   $color-02 0%,
   $color-03 100%
 );
+
+$box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);

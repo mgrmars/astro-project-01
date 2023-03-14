@@ -25,7 +25,7 @@ const { href, title, author, date, resumen, class: className } = Astro.props;
     background-color: variables.$background-gradient-boxes-fallback;
     border-radius: 0.5rem;
     transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
+    box-shadow: variables.$box-shadow;
 
     &:hover {
       background-image: none;
@@ -40,13 +40,14 @@ const { href, title, author, date, resumen, class: className } = Astro.props;
     .title {
       margin-block-end: 0.6rem;
     }
-  
+
     .information {
       display: block;
       font-size: 0.8rem;
       margin-bottom: 0.6rem;
+      color: inherit;
+      opacity: 0.6;
     }
-
 
     .author,
     .date {
@@ -59,7 +60,7 @@ const { href, title, author, date, resumen, class: className } = Astro.props;
   }
 </style>
 
-<a class={className, "post"} href={href}>
+<a class={(className, "post")} href={href}>
   <h3 class="title">{title}</h3>
   <span class="information">
     publicado

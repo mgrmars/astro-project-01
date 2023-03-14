@@ -7,4 +7,4 @@ date: 03-08-2023
 draft: false
 ---
 
-¡Por fin terminé con las clases extra-curriculares! :>
+¡Por fin terminé con las clases extra-curriculares! Ahora puedo dedicar más tiempo a programar y diseñar la página web.

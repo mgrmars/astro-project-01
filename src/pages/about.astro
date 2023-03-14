@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style lang="scss">
   @use "../styles/variables";
+
   a {
     background-color: variables.$color-02;
     transition: background-color 0.2s ease-in-out;
@@ -15,20 +16,17 @@ import Layout from "../layouts/Layout.astro";
 </style>
 
 <Layout pageTitle="acerca de" pageDescription="Página acerca de">
-  <h1>Acerca de mí</h1>
+  <h1>Acerca de</h1>
+
   <p>
-    Mi nombre es Adrián González y soy un desarrollador web apasionado por la
-    tecnología y el diseño gráfico. Me encanta aprender cosas nuevas,
-    especialmente en el área de diseño de interfaces, programación, música,
-    gatos y disfruto mucho de una refrescante Fanta naranja.
-  </p>
-  <p>Este sitio web está creado usando Astro y Sass principalmente.</p>
-  <p>
-    Puedes conocer más acerca de mi en
+    Puedes conocer más acerca de mi, Adrian Gonzales, en
     <a class="hyperlink" href="/blog/posts/acerca-de-mi">este post</a>. Puedes
     contactarme por medio de mi perfil de <a
       target="_blank"
       href="https://github.com/mgrmars">Github</a
     >.
+  </p>
+  <p>
+    Este sitio web está creado usando Astro y Sass y una pisca de Javascript.
   </p>
 </Layout>

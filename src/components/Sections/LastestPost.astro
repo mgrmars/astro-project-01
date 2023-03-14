@@ -1,0 +1,48 @@
+---
+// components
+import CardBlog from "../Cards/CardBlog.astro";
+
+// utils
+import { formatBlogPost } from "../../js/utils";
+
+const posts = await Astro.glob("../../pages/blog/posts/*.md");
+const formattedPosts = formatBlogPost(posts, { filterOutFuturePosts: false });
+const post = formattedPosts[0];
+---
+
+<style lang="scss">
+  hr {
+    border: none;
+    height: 1px;
+    background-color: hsla(0, 0, 0, 0.2);
+    margin: 2rem 0;
+  }
+  section {
+    margin: 2rem 0;
+    .description {
+      margin-bottom: 2rem;
+      h3 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+</style>
+<hr />
+<section>
+  <div class="description">
+    <h3>Nueva publicación</h3>
+    <p>Ver la última publicación subida al blog.</p>
+  </div>
+  {
+    (
+      <CardBlog
+        class="card"
+        href={post.url}
+        title={post.frontmatter.title}
+        author={post.frontmatter.author}
+        date={post.frontmatter.date}
+        resumen={post.frontmatter.resumen}
+      />
+    )
+  }
+</section>

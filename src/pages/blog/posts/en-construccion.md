@@ -9,4 +9,4 @@ draft: false
 
 Todavia estoy diseñando y programando partes de la interfaz, me esta tomando más de lo normal :P.
 
-Creo que inicié el 1 de enero, pero estuve estudiando otras tecnologías, ademas, tengo clases extracurriculares de Calculo y clases virtuales de Ingles.
+Creo que inicié el 31 de Diciembre del 2022, pero estuve estudiando otras tecnologías, ademas, tengo clases extracurriculares de Calculo y clases virtuales de Ingles.

@@ -11,7 +11,7 @@
 
 html {
   font-family: variables.$text-font;
-  font-size: 1.05rem;
+  font-size: 1.06rem;
 }
 
 body {
@@ -23,8 +23,8 @@ body {
 main {
   min-height: calc(100vh - 2.1rem);
   position: relative;
-  padding: 2rem;
   color: hsla(0, 0%, 0%, 90%);
+  padding: 2rem;
 }
 
 h1,
@@ -45,8 +45,8 @@ pre,
 code,
 table,
 label {
-  margin-block-end: 1.4rem;
-  line-height: 140%;
+  margin-block-end: 1.3rem;
+  line-height: 160%;
   color: inherit;
 }
 
@@ -60,6 +60,9 @@ h6 {
   font-weight: 800;
   font-family: variables.$display-font;
   word-wrap: break-word;
+  line-height: 100%;
+  margin-block-end: 2rem;
+
   // A replace for hypens for word break
   hyphens: auto;
   &:first-letter {
@@ -69,7 +72,6 @@ h6 {
 
 h1 {
   font-size: 2.3rem;
-  line-height: 100%;
 }
 
 h2 {
@@ -82,7 +84,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 img {
@@ -91,6 +93,5 @@ img {
   margin-bottom: 1rem;
   max-width: 100%;
   border-radius: 0.4rem;
-  /* smooth shadow */
-  box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 0%, 10%);
+  box-shadow: variables.$box-shadow;
 }
